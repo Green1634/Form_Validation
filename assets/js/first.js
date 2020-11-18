@@ -52,21 +52,25 @@
 function validation() {
     let fullName = document.forms["my_form"]["first_name"];
     let mail =  document.forms["my_form"]["E-mail"];
+    let msg;
 
     if(fullName.value == "") {
-      alert("Please enter your name.");
+      msg = "Please enter your name.";
+      document.getElementById("msg").innerHTML = msg;
       fullName.focus();
       return false;
     }
 
     if(mail.value == "") {
-      alert("Please enter a valid e-mail address.");
+      msg = "Please enter a valid email.";
+      document.getElementById("msg2").innerHTML = msg;
       mail.focus();
       return false;
     }
 
     if(mail.value.indexOf("@", 0) < 0) {
-      alert("Please enter a valid e-mail address.");
+      msg = "Please enter a valid email.";
+      document.getElementById("msg2").innerHTML = msg;
       mail.focus();
       return false;
     }
