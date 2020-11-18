@@ -57,21 +57,21 @@ function validation() {
     if(fullName.value == "") {
       msg = "Please enter your name.";
       document.getElementById("msg").innerHTML = msg;
-      fullName.focus();
+      // fullName.focus();
       return false;
     }
-
+    
     if(mail.value == "") {
       msg = "Please enter a valid email.";
       document.getElementById("msg2").innerHTML = msg;
-      mail.focus();
+      // mail.focus();
       return false;
     }
 
     if(mail.value.indexOf("@", 0) < 0) {
       msg = "Please enter a valid email.";
       document.getElementById("msg2").innerHTML = msg;
-      mail.focus();
+      // mail.focus();
       return false;
     }
 
